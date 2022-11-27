@@ -1,0 +1,13 @@
+{% extends '_base.html' %}
+{% block content %}
+<form action="/users/{{ user.id }}/edit" method="POST">
+  <label class="lbl" for="first-name">First Name</label>
+  <input class="inp" name="first-name" placeholder="Enter a first name" value="{{ user.first_name }}">
+  <label class="lbl" for="last-name">Last Name</label>
+  <input class="inp" name="last-name" placeholder="Enter a last name" value="{{ user.last_name }}">
+  <label class="lbl" for="image-url">Image URL</label>
+  <input class="inp" name="image-url" placeholder="Provide an image of this user" value="{{ user.image_url }}">
+  <a href="/users"><button class="btn">Cancel</button></a>
+  <input type="submit" class="dsp-inline btn btn-save" value="Save">
+</form>
+{% endblock %}

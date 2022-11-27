@@ -1,0 +1,110 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+img{
+    margin-right: 1.00rem;
+    max-width: 10.00rem;
+    float: left;
+}
+
+.div-float {
+    float: left;
+}
+
+.users-list {
+    list-style-type: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2.00rem;
+}
+
+.lbl {
+    margin-top: 1.00rem;
+    display: block;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.00rem;
+    font-weight: bold;
+}
+
+.inp {
+    display: block;
+    font-size: 1.25rem;
+    font-weight: normal;
+    width: 20.00rem;
+}
+
+.view-user-name {
+    display: block;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2.00rem;
+    font-weight: bold;
+}
+
+.post-content {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 5.00rem;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.post-byline {
+    display: block;
+}
+
+.btn {
+    margin-top: 1.00rem;
+    padding: 5px;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-size: 1.25rem;
+    border-radius: 0.75rem;
+}
+
+.flashes {
+    list-style-type: none;
+}
+
+.warning {
+    color: orange;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.okay {
+    color: rgb(0, 180, 0);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.btn-edit {
+    background-color: #000080;
+    color: #CCC;
+}
+
+.btn-delete {
+    background-color: #800000;
+    color: #CCC;
+}
+
+.btn-save {
+    background-color: #008000;
+    color: #CCC;
+}
+
+input[type="submit"]:disabled, 
+button:disabled {
+    background-color: #F0F0F0;
+    color: #AAA;
+}
+  
+.dsp-hide {
+    display: none;
+}
+
+.dsp-inline {
+    display: inline;
+}
+
+.dsp-block {
+    display: block;
+}

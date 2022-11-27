@@ -1,0 +1,11 @@
+{% extends '_base.html' %}
+{% block content %}
+<form action="/posts/{{ post.id }}/edit" method="POST">
+  <label class="lbl" for="post-title">Title</label>
+  <input class="inp" name="post-title" value="{{ post.title }}">
+  <label class="lbl" for="post-content">Content</label>
+  <textarea rows="5" class="inp" name="post-content" wrap="hard">{{ post.content }}</textarea>
+  <input type="submit" class="dsp-inline btn btn-save" value="Save">
+</form>
+<a href="/users/{{ post.user_id }}"><button class="btn">Cancel</button></a>
+{% endblock %}

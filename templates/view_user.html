@@ -1,0 +1,26 @@
+{% extends '_base.html' %}
+{% block content %}
+<img src="{{ user.image_url }}" alt="no image &#x1F615;">
+<div class="div-float">
+    <span class="view-user-name">{{user.first_name}} {{user.last_name}}</span>
+    <a href="/users"><button class="btn">Cancel</button></a>
+    <a href="/users/{{ user.id }}/edit"><button class="btn btn-edit">Edit</button></a>
+    <form class="dsp-inline" action="/users/{{ user.id }}/delete" method="post">
+        {% if allow_delete %}
+        <input type="submit" class="btn btn-delete" value="Delete">
+        {% else %}
+        <input type="submit" class="btn btn-delete" disabled value="Delete">
+        {% endif %}
+    </form>
+    {% if user.posts %}
+    <span class="view-user-name">Posts</span>
+    <ul>
+        {% for post in user.posts %}
+        <li><a href="/posts/{{ post.id }}">{{ post.title }}</a></li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    <a href="/users/{{ user.id }}/posts/new"><button class="btn dsp-block">Add Post</button></a>
+</div>
+
+{% endblock %}

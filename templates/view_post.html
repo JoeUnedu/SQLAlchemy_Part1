@@ -1,0 +1,11 @@
+{% extends '_base.html' %}
+{% block content %}
+<p class="">{{ post.content }} </p>
+<span class="post-byline">by {{ user_full_name }} at {{ created }}</span>
+<a href="/users/{{ post.user_id }}"><button class="btn">Cancel</button></a>
+<a href="/posts/{{ post.id }}/edit"><button class="btn btn-edit">Edit</button></a>
+<form class="dsp-inline" action="/posts/{{ post.id }}/delete" method="post">
+    <input type="submit" class="btn btn-delete" value="Delete">
+</form>
+
+{% endblock %}
